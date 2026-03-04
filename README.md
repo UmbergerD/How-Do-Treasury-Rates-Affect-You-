@@ -74,7 +74,7 @@ Constant‑Spread Mortgage Model
 
 • 	Mortgage ≈ Treasury + 1.782% (baseline spread)
 
-• 	RMSE = 0.033, MAE = 0.031
+• 	RMSE (Root Mean Squared Error) = 0.033, MAE (Mean Absolute Error) = 0.031
 
 • 	Accurate overall, but spreads vary during market volatility.
 
