@@ -1,96 +1,96 @@
 # Apple Watch Health Data Ethics & Bias Analysis
 # Executive Summary:
-The Apple Watch has evolved into a powerful health‑monitoring device capable of collecting continuous biometric and behavioral data, including heart rate, sleep cycles, physical activity, and oxygen levels. These capabilities enable personalized health insights and early detection of medical issues, but they also introduce significant ethical concerns around privacy, informed consent, and data governance. As wearable devices become more integrated into daily life, the boundary between health monitoring and surveillance becomes increasingly blurred.
+Movements in the U.S. 10‑year Treasury yield play a central role in shaping consumer borrowing costs across the financial system. Because the 10‑year Treasury is considered a near risk‑free benchmark, lenders use it as a foundation for pricing long‑term credit products such as mortgages, commercial loans, and auto loans. This project analyzes nearly two decades of monthly data (August 2006–April 2025) to measure how strongly Treasury yields correlate with consumer lending rates and to determine which loan types are most sensitive to Treasury movements.
 
-This project evaluates Apple’s health data collection practices through both technical and ethical lenses. Using a dataset from a controlled laboratory study, the analysis examines data quality, outliers, skewed distributions, and demographic imbalances that may influence algorithmic performance. Ethical frameworks—including Kantianism, Act Utilitarianism, and Rule Utilitarianism—are applied to assess Apple’s responsibilities regarding transparency, fairness, and user autonomy.
+The analysis includes correlation testing, multivariate regression, outlier diagnostics, and assumption checks to ensure statistical validity. Secured lending products—especially 30‑year mortgages (r = .96) and commercial 504 loans (r = .93)—showed the strongest relationships with Treasury yields. Unsecured products such as credit cards (r = .47) and Stafford loans (r = .68) demonstrated weaker or negative coefficients due to risk premiums, regulatory formulas, and annual rate resets. A refined regression model explained 94% of the variance in Treasury yields, confirming the Treasury’s role as a macroeconomic driver.
 
-The findings reveal that while Apple Watch data can support meaningful health insights, it also carries risks related to algorithmic bias, third‑party access, commercialization of sensitive information, and long‑term psychological impacts. Recommendations emphasize improving meaningful consent, strengthening data security, increasing transparency, and adopting fairness‑oriented modeling practices to ensure that wearable technologies support public health without compromising user rights.
+These findings have practical implications for lenders, policymakers, investors, and consumers. Treasury movements influence mortgage pricing, credit market activity, refinancing decisions, and broader economic conditions. Understanding these relationships helps stakeholders anticipate rate adjustments and make informed financial decisions.
 
 # Business Problem:
-Wearable devices like the Apple Watch collect vast amounts of biometric data with minimal user intervention. While this data can improve health outcomes, it also creates a complex ecosystem where users often lack the knowledge or capacity to manage their privacy effectively. Consent agreements are lengthy, opaque, and difficult to interpret, leaving users unaware of how their data is collected, processed, or shared. This creates a gap between user expectations and actual data practices.
+Consumer lending rates affect millions of borrowers and play a major role in housing markets, credit markets, and overall economic activity. Yet most consumers—and even many business stakeholders—do not fully understand how benchmark Treasury yields translate into the interest rates they pay on mortgages, auto loans, personal loans, and credit cards. This creates a transparency gap that limits effective financial planning and risk management.
 
-From a business and societal perspective, the reliability and fairness of health‑related algorithms are critical. If the underlying data is biased or unbalanced, predictive models may misclassify activity levels or physiological states, leading to inaccurate health insights or discriminatory outcomes. Companies like Apple must balance innovation with ethical responsibility, ensuring that data collection, processing, and algorithmic decision‑making are transparent, equitable, and aligned with user rights. 
+Financial institutions rely on Treasury yields to price long‑term lending products, but the strength of these relationships varies widely across loan types. Without a clear analytical understanding of these linkages, lenders may misprice risk, policymakers may misinterpret market signals, and consumers may make suboptimal borrowing decisions. This project addresses that gap by quantifying how strongly different lending products respond to Treasury movements and by identifying which loan types are most sensitive to macroeconomic shifts. 
 
 # Methodology:
-• 	Conducted a full structural audit of the dataset, checking for missing values, duplicates, and anomalies.
+• 	Collected monthly data (2006–2025) for the 10‑year Treasury yield and six consumer lending rates.
 
-• 	Performed exploratory data analysis using histograms, boxplots, and distribution plots to identify outliers and skewed variables.
+• 	Conducted exploratory data analysis, descriptive statistics, and time‑series visualization.
 
-• 	Evaluated demographic and activity‑level imbalances, including gender distribution and class imbalance across activity categories.
+• 	Performed outlier detection using Cook’s distance, leverage values, and Mahalanobis distance.
 
-• 	Applied winsorization (1st–99th percentile) to reduce the influence of extreme sensor spikes while preserving physiological ranges.
+• 	Removed 13 extreme observations to stabilize the regression model.
 
-• 	Implemented a reweighting‑based resampling technique to address intersectional bias without generating synthetic physiological signals.
+• 	Verified regression assumptions: additivity, linearity, normality, homoscedasticity.
 
-• 	Assessed ethical implications using Kantianism, Act Utilitarianism, and Rule Utilitarianism.
+• 	Built a multivariate regression model predicting Treasury yields from loan rates.
 
-• 	Documented transparency measures, including feature provenance, preprocessing decisions, and fairness considerations.
+• 	Applied backward elimination to retain only statistically significant predictors.
+
+• 	Developed a constant‑spread benchmark model for mortgage rates to test predictive validity.
+
+• 	Interpreted results in the context of financial markets, risk premiums, and regulatory structures.
 
 # Skills:
-• 	Data quality auditing and preprocessing
+• 	Correlation analysis and regression modeling
 
-• 	Exploratory data analysis and visualization
+• 	Outlier detection and assumption diagnostics
 
-• 	Bias detection and fairness‑oriented resampling
+• 	Time‑series visualization and interpretation
 
-• 	Ethical reasoning and data governance analysis
+• 	Model refinement using backward elimination
 
-• 	Interpretation of wearable‑sensor data
+• 	Financial analytics and interest‑rate modeling
 
-• 	Documentation and transparency practices
+• 	R programming (ggplot2, corrplot, psych, car, lmtest, dplyr)
 
-• 	Python (pandas, numpy, matplotlib, seaborn)
+• 	Data cleaning, normalization, and reproducibility practices
 
-• 	Jupyter Notebook workflow
+• 	APA‑style reporting and statistical communication
 
 # Results and Recommendations:
-Data Quality & Distribution Findings
+Correlation Findings
+• 	Mortgage rates (r = .96) and commercial 504 loan rates (r = .93) track Treasury yields most closely.
 
-• 	No missing or duplicate records were found.
+• 	Auto (r = .85) and personal loans (r = .87) show moderate sensitivity.
 
-• 	Steps and distance variables contained >10% outliers, likely due to activity transitions.
+• 	Credit card APRs (r = .47) and Stafford loans (r = .68) show weak or negative coefficients due to risk premiums and regulatory formulas.
 
-<h3>Visualization:Outlier Concentration</h3>
-<img src="figures/fig_outliers.png" width="500">
+<h3>Visualization: Mortgage vs. Treasury</h3>
+<img src="figures/fig_mortgage_vs_treasury.png" width="500">
 
-<h3>Steps × Distance Histogram</h3>
-<img src="figures/fig_histograms.png" width="500">
+Regression Findings
+• 	Final model R² = .94, indicating strong explanatory power.
 
-• 	Heart rate distributions were bimodal, reflecting rest vs. exertion states.
+• 	Significant predictors: 30‑year mortgage rate, credit card rate, 5‑year auto rate, commercial 504 rate.
 
-<h3>Visualization: Heart Rate by Gender</h3>
-<img src="figures/fig_heart_rate_gender.png" width="500">
+• 	Negative coefficients for credit card and Stafford loans reflect pricing structures unrelated to Treasury movements.
 
-• 	Derived metrics (entropy, correlation) showed narrow ranges due to internal smoothing.
+<h3>Visualization: Credit Card vs. Treasury</h3>
+<img src="figures/fig_creditcard_vs_treasury.png" width="500">
 
-Bias & Imbalance Findings
+Constant‑Spread Mortgage Model
+• 	Mortgage ≈ Treasury + 1.782% (baseline spread)
 
-• 	“Lying” activity dominated the dataset, creating label imbalance.
+• 	RMSE = 0.033, MAE = 0.031
 
-• 	Gender imbalance (26 women, 20 men) contributed to intersectional bias.
+• 	Accurate overall, but spreads vary during market volatility.
 
-• 	Women were overrepresented in low‑movement states, while men appeared more often in higher‑intensity activities.
-
-<h3>Visualization: Activity Distribution</h3>
-<img src="figures/fig_activity_distribution.png" width="500">
+<h3>Visualization: Constant‑Spread Model</h3>
+<img src="figures/fig_constant_spread.png" width="500">
 
 Recommendations
 
-• 	Improve meaningful consent through progressive disclosure and simplified language.
+• 	Lenders should monitor Treasury yields closely when pricing secured lending products.
 
-• 	Strengthen data security with end‑to‑end encryption and independent audits.
+• 	Policymakers should consider Treasury movements when evaluating consumer borrowing conditions.
 
-• 	Enforce strict third‑party data contracts to prevent unauthorized sharing.
+• 	Consumers should expect mortgage and auto loan rates to move in tandem with Treasury yields.
 
-• 	Publish transparency reports detailing data usage, retention, and algorithmic impacts.
-
-• 	Adopt fairness‑oriented modeling practices, including reweighting and demographic reporting.
-
-• 	Maintain reproducible preprocessing logs and model cards for accountability.
+• 	Investors can use Treasury trends as early indicators of housing and credit market activity.
 
 # Next Steps:
-1. 	Develop a reproducible code pipeline including a full preprocessing log, reweighting script, and model evaluation notebook.
+1. 	Expand the model by incorporating macroeconomic indicators such as inflation, unemployment, and the Federal Funds Rate.
 
-2. 	Create a model card or dataset factsheet summarizing demographic composition, preprocessing steps, and fairness considerations.
+2. 	Apply time‑series methods (ARIMA, VAR) to capture lagged effects and structural breaks.
 
-3. 	Extend the analysis to real‑world Apple Watch datasets (if available) to compare laboratory findings with naturalistic user behavior.
+3. 	Explore machine learning models (Random Forest, Gradient Boosting) to capture nonlinear relationships and improve predictive accuracy.
