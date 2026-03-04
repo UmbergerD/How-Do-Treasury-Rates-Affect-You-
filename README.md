@@ -49,6 +49,7 @@ Financial institutions rely on Treasury yields to price long‑term lending prod
 
 # Results and Recommendations:
 Correlation Findings
+
 • 	Mortgage rates (r = .96) and commercial 504 loan rates (r = .93) track Treasury yields most closely.
 
 • 	Auto (r = .85) and personal loans (r = .87) show moderate sensitivity.
@@ -59,6 +60,7 @@ Correlation Findings
 <img src="figures/fig_mortgage_vs_treasury.png" width="500">
 
 Regression Findings
+
 • 	Final model R² = .94, indicating strong explanatory power.
 
 • 	Significant predictors: 30‑year mortgage rate, credit card rate, 5‑year auto rate, commercial 504 rate.
@@ -69,6 +71,7 @@ Regression Findings
 <img src="figures/fig_creditcard_vs_treasury.png" width="500">
 
 Constant‑Spread Mortgage Model
+
 • 	Mortgage ≈ Treasury + 1.782% (baseline spread)
 
 • 	RMSE = 0.033, MAE = 0.031
