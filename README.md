@@ -50,15 +50,30 @@ Data Quality & Distribution Findings
 
 • 	Steps and distance variables contained >10% outliers, likely due to activity transitions.
 
+Visualization: Outlier Concentration
+<h3>Outlier Concentration</h3>
+![Outliers in Steps and Distance](figures/fig_outliers.png) 
+<img src="figures/fig_outliers.png" width="500">
+
+Steps × Distance Histogram
+<h3>Steps × Distance Histogram</h3>
+![Steps x Distance Histogram](figures/fig_histograms.png)
+<img src="figures/fig_histograms.png" width="500">
+
 • 	Heart rate distributions were bimodal, reflecting rest vs. exertion states.
+
+Example Visualization: Heart Rate by Gender
+<h3>Heart Rate by Gender</h3>
+![Heart Rate Distribution](figures/fig_heart_rate_gender.png)
+<img src="figures/fig_heart_rate_gender.png" width="500">
 
 • 	Derived metrics (entropy, correlation) showed narrow ranges due to internal smoothing.
 
-Example Visualization: Outlier Concentration
-(Insert Graph 1: Variables with >10% outliers)
+Visualization: Activity Distribution
+<h3>Activity Distribution</h3>
+![Activity Histogram](figures/fig_activity_distribution.png)
+<img src="figures/fig_activity_distribution.png" width="500">
 
-Example Visualization: Activity Distribution
-(Insert Graph 5: Activity Histograms)
 
 Bias & Imbalance Findings
 
@@ -68,8 +83,9 @@ Bias & Imbalance Findings
 
 • 	Women were overrepresented in low‑movement states, while men appeared more often in higher‑intensity activities.
 
-Example Visualization: Heart Rate by Gender
-(Insert Graph 6: Distribution of Heart Rate by Gender)
+
+
+
 
 Recommendations
 
