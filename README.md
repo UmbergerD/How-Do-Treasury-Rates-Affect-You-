@@ -1,4 +1,4 @@
-# Apple Watch Health Data Ethics & Bias Analysis
+# How-Do-Treasury-Rates-Affect-You?
 # Executive Summary:
 Movements in the U.S. 10‑year Treasury yield play a central role in shaping consumer borrowing costs across the financial system. Because the 10‑year Treasury is considered a near risk‑free benchmark, lenders use it as a foundation for pricing long‑term credit products such as mortgages, commercial loans, and auto loans. This project analyzes nearly two decades of monthly data (August 2006–April 2025) to measure how strongly Treasury yields correlate with consumer lending rates and to determine which loan types are most sensitive to Treasury movements.
 
