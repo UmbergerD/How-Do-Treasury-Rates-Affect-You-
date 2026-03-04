@@ -45,6 +45,7 @@ From a business and societal perspective, the reliability and fairness of health
 
 # Results and Recommendations:
 Data Quality & Distribution Findings
+
 • 	No missing or duplicate records were found.
 
 • 	Steps and distance variables contained >10% outliers, likely due to activity transitions.
@@ -60,6 +61,7 @@ Example Visualization: Activity Distribution
 (Insert Graph 5: Activity Histograms)
 
 Bias & Imbalance Findings
+
 • 	“Lying” activity dominated the dataset, creating label imbalance.
 
 • 	Gender imbalance (26 women, 20 men) contributed to intersectional bias.
@@ -70,6 +72,7 @@ Example Visualization: Heart Rate by Gender
 (Insert Graph 6: Distribution of Heart Rate by Gender)
 
 Recommendations
+
 • 	Improve meaningful consent through progressive disclosure and simplified language.
 
 • 	Strengthen data security with end‑to‑end encryption and independent audits.
