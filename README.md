@@ -52,7 +52,6 @@ Data Quality & Distribution Findings
 
 Visualization: Outlier Concentration
 <h3>Outlier Concentration</h3>
-![Outliers in Steps and Distance](figures/fig_outliers.png) 
 <img src="figures/fig_outliers.png" width="500">
 
 Steps × Distance Histogram
